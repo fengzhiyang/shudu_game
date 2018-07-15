@@ -1,0 +1,140 @@
+html {
+  font-size: 14px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #eeeeee;
+  font-family: "Consolas", "微软雅黑", "Heiti";
+  overflow: hidden;
+  user-select: none;
+  max-width: 450px;
+}
+body > * {
+  max-width: 450px;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+.hidden {
+  display: none !important;
+}
+.title {
+  padding: 1rem 5%;
+  background: steelblue;
+  color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.2rem 0.3rem #303030;
+}
+.container {
+  padding-left: 5%;
+}
+.row > span {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  height: 24px;
+  line-height: 24px;
+  border-color: #888888;
+  border-style: solid;
+  border-width: 0;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  background-color: white;
+}
+.row > span.fixed {
+  color: #999999;
+}
+.row > span.empty {
+  color: transparent;
+}
+.row > span.mark1 {
+  background: lightblue;
+}
+.row > span.mark2 {
+  background: lightgreen;
+}
+.row > span.error {
+  background: lightpink;
+}
+.row > span.col_g_left {
+  border-left-width: 1px;
+}
+.row > span.col_g_right {
+  border-right-width: 1px;
+}
+.row > span:first-child {
+  border-left-width: 2px;
+}
+.row > span:last-child {
+  border-right-width: 2px;
+}
+.row.row_g_top > span {
+  border-top-width: 1px;
+}
+.row.row_g_bottom > span {
+  border-bottom-width: 1px;
+}
+.row:first-child > span {
+  border-top-width: 2px;
+}
+.row:last-child > span {
+  border-bottom-width: 2px;
+}
+.dashboard {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background: steelblue;
+  box-sizing: border-box;
+  box-shadow: 0 -0.1rem 0.2rem #303030;
+  height: 3rem;
+}
+.dashboard .buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.dashboard .buttons button {
+  font-family: "Consolas", "微软雅黑", "Heiti";
+  float: left;
+  width: 25%;
+  height: 3rem;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  border: 1px solid #cccccc;
+  border-right-width: 0;
+}
+.dashboard .buttons button:last-child {
+  border-right-width: 1px;
+}
+.popup-num {
+  position: fixed;
+  display: inline-block;
+  top: 100px;
+  left: 120px;
+  box-shadow: 0.2rem 0.3rem 0.4rem #303030;
+  border: 1px solid white;
+  color: white;
+}
+.popup-num div > span {
+  background: steelblue;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  border-color: white;
+}
+.popup-num div > span.mark {
+  color: transparent;
+}
