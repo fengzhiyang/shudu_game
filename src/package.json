@@ -1,0 +1,25 @@
+{
+  "name": "sudoku",
+  "version": "1.0.0",
+  "repository": {},
+  "author": "",
+  "license": "",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.3.1",
+    "ts-loader": "^3.4.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
+  }
+}

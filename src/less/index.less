@@ -1,0 +1,169 @@
+@rootFontSize: 14px;
+@rootFontFamily: "Consolas", "微软雅黑", "Heiti";
+@shadow: 0.2rem 0.3rem 0.4rem rgba(48, 48, 48, 192);
+@shadowBottom: 0 0.2rem 0.3rem rgba(48, 48, 48, 192);
+@shadowTop: 0 -0.1rem 0.2rem rgba(48, 48, 48, 192);
+@borderColor: #888888;
+@popupBlockSize: 48px;
+// Style rules
+html {
+    font-size: @rootFontSize;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #eeeeee;
+    font-family: @rootFontFamily;
+    overflow: hidden;
+    user-select: none;
+    // 兼容非移动平台的 web
+    max-width: 450px;
+    >* {
+        max-width: 450px;
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.title {
+    padding: 1rem 5%;
+    background: steelblue;
+    color: white;
+    margin-bottom: 2rem;
+    box-shadow: @shadowBottom;
+}
+
+.container {
+    padding-left: 5%;
+}
+
+.row {
+    >span {
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        width: 10%;
+        height: 24px;
+        line-height: 24px;
+        border-color: @borderColor;
+        border-style: solid;
+        border-width: 0;
+        border-top-width: 1px;
+        border-left-width: 1px;
+        background-color: white;
+        &.fixed {
+            color: #999999;
+        }
+        &.empty {
+            color: transparent;
+        }
+        &.mark1 {
+            background: lightblue;
+        }
+        &.mark2 {
+            background: lightgreen;
+        }
+        &.error {
+            background: lightpink;
+        }
+        &.col_g_left {
+            border-left-width: 1px;
+        }
+        &.col_g_right {
+            border-right-width: 1px;
+        }
+        &:first-child {
+            border-left-width: 2px;
+        }
+        &:last-child {
+            border-right-width: 2px;
+        }
+    }
+    &.row_g_top {
+        >span {
+            border-top-width: 1px;
+        }
+    }
+    &.row_g_bottom {
+        >span {
+            border-bottom-width: 1px;
+        }
+    }
+    &:first-child {
+        >span {
+            border-top-width: 2px;
+        }
+    }
+    &:last-child {
+        >span {
+            border-bottom-width: 2px;
+        }
+    }
+}
+
+.dashboard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    background: steelblue;
+    box-sizing: border-box;
+    box-shadow: @shadowTop;
+    height: 3rem;
+    .buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        button {
+            font-family: @rootFontFamily;
+            float: left;
+            width: 25%;
+            height: 3rem;
+            font-size: 1.3rem;
+            color: white;
+            background: transparent;
+            border: 1px solid #cccccc;
+            border-right-width: 0;
+            &:last-child {
+                border-right-width: 1px;
+            }
+        }
+    }
+}
+
+.popup-num {
+    position: fixed;
+    display: inline-block;
+    top: 100px;
+    left: 120px;
+    box-shadow: @shadow;
+    border: 1px solid white;
+    color: white;
+    div {
+        >span {
+            background: steelblue;
+            width: @popupBlockSize;
+            height: @popupBlockSize;
+            line-height: @popupBlockSize;
+            font-size: 24px;
+            border-color: white;
+            &.mark {
+                color: transparent;
+            }
+        }
+    }
+}
